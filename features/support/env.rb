@@ -18,11 +18,11 @@ VALID_ENVIRONMENTS = %w{dev qa staging production}  # array of supported environ
 VALID_BROWSERS = %w{chrome firefox safari}          # array of supported browsers
 
 # Default settings
-ENV['TEST_ENV'] ||= 'production'          # default env. (another acceptable env. - 'dev', 'qa', 'staging', 'production')
+ENV['TEST_ENV'] ||= 'production'  # default env. (another acceptable env. - 'dev', 'qa', 'staging', 'production')
 ENV['TEST_BROWSER'] ||= 'chrome'  # default browser (another acceptable browsers - 'firefox', 'safari')
 DEFAULT_TIMEOUT = 5
 
-# Deleting previous screenshots
+# Deleting screenshots from previous run if any
 FileUtils.rm Dir['screenshot*.png']
 
 # Loading configuration parameters and test data into hash
@@ -34,7 +34,7 @@ def create_instance
     @wait = Selenium::WebDriver::Wait.new(:timeout => 5)
     @browser.manage.window.resize_to(1024, 768)
     @browser.manage.timeouts.implicit_wait = DEFAULT_TIMEOUT  # specify implicit wait for element to be present (seconds)
-    @browser.manage.timeouts.page_load = 10     # specify implicit wait for page to be loaded (seconds)
+    @browser.manage.timeouts.page_load = 10 # specify implicit wait for page to be loaded (seconds)
   else
     raise 'Wrong browser or non-supported environment provided'
   end

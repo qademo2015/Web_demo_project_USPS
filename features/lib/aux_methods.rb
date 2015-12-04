@@ -1,7 +1,4 @@
-# require 'test/unit'
-
 module AuxModule
-  # include Test::Unit::Assertions
 
   def take_screenshot_for_scenario(scenario)
     name_of_screenshot_file = 'screenshot_' + scenario.name + Time.now.to_s.downcase.tr!(' ', '_') + '.png'

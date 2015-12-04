@@ -9,7 +9,7 @@ class BasePage
   end
 
   def build_url
-    add_env_prefix($env_config['url'])
+    self.page_url
   end
 
   def source
