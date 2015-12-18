@@ -4,11 +4,6 @@ require 'yaml'
 
 require_relative '../lib/env_config'
 require_relative '../lib/aux_methods'
-
-# require_relative '../lib/*'
-
-# Dir['../lib/*.rb'].each { |file| require file }
-
 require_relative '../page_model/base_page'
 require_relative '../page_model/pages'
 Dir['../page_model/*.rb'].each { |file| require file }

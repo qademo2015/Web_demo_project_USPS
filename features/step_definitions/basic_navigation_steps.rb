@@ -8,7 +8,6 @@ Then(/^The following sub-items should be present:$/) do |table|
       case item
         when 'My USPS'
           usps.usps_page.my_usps.displayed?
-          # usps.usps_page.my_usps.is_present?
         when 'Find USPS Locations'
           usps.usps_page.find_locations.displayed?
         when 'Buy Stamps'
