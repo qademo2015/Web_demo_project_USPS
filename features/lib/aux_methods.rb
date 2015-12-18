@@ -9,4 +9,4 @@ module AuxModule
     $env_config['prefix'] + url
   end
 
-end # end of AuxModule
+end

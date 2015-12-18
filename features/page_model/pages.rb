@@ -22,7 +22,6 @@ class Pages < BasePage
 
   def is_present?
     puts 'Start check if element is present on page'
-    # assert_equal(self.displayed?, true)
     expect(self.displayed?).to be true
   end
 

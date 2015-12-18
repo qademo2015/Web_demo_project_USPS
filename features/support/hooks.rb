@@ -10,6 +10,6 @@ After do |scenario|
   if scenario.failed?
     take_screenshot_for_scenario(scenario)
   end
-  # @browser.close
-  # @browser.quit
+  @browser.close
+  @browser.quit
 end

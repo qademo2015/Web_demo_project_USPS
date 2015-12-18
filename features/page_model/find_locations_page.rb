@@ -20,18 +20,4 @@ class FindLocationsPage < Pages
     @browser.find_element(:css, 'tbody.resultRows').find_elements(:css, 'tr.result')
   end
 
-  # def find_by_tag_and_text
-  #   @browser.find_element(:xpath, "//span[text()='20 miles']")
-  # end
-  #
-  # def find_by_link_text
-  #   @browser.find_element(:link_text, "Browse our FAQs ›")
-  # end
-  #
-  # def wait_for_faq
-  #   wait = Selenium::WebDriver::Wait.new(:timeout => 30)
-  #   # wait.until{@browser.find_element(:link_text, "Browse our FAQs ›")}
-  #   wait.until{find_by_link_text}
-  # end
-
 end
