@@ -1,5 +1,6 @@
 # 'Before' and 'After' closures
 Before do |scenario|
+  puts "Start scenario - #{scenario.name}"
   create_instance
   @browser.manage.delete_all_cookies
 end
