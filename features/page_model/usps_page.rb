@@ -19,11 +19,11 @@ class UspsPage < Pages
   def click_sub_item_by_name(name)
     case name
       when 'My USPS'
-        usps.usps_page.my_usps.click
+        self.my_usps.click
       when 'Find USPS Locations'
-        usps.usps_page.find_locations.click
+        self.find_locations.click
       when 'Buy Stamps'
-        usps.usps_page.buy_stamps.click
+        self.buy_stamps.click
       else
         raise "The sub-item #{name} is undefined"
     end

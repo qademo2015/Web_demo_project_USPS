@@ -4,6 +4,10 @@ class Pages < BasePage
     @usps_page ||= UspsPage.new @browser
   end
 
+  def find_locations_page
+    @find_locations_page ||= FindLocationsPage.new @browser
+  end
+
   def buy_stamps_page
     @buy_stamps_page ||= BuyStampsPage.new @browser
   end
